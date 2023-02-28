@@ -15,7 +15,7 @@ namespace RevitWpfTemplate1
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
             Document doc = uidoc.Document;
             MainWindow mainWindow = new MainWindow(uidoc, doc);
-            mainWindow.Show();
+            mainWindow.ShowDialog();
             return Result.Succeeded;
             
         }

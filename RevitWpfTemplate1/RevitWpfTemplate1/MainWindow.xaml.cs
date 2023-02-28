@@ -1,4 +1,5 @@
 ﻿
+using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Structure;
 using Autodesk.Revit.UI;
@@ -22,6 +23,7 @@ namespace RevitWpfTemplate1
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
+
     public partial class MainWindow : Window
     {
         
@@ -52,18 +54,23 @@ namespace RevitWpfTemplate1
                 {
                     if (item.Name== "承台001")
                     {
+                      
                         using (Transaction trans = new Transaction(doc))
                         {
                             trans.Start("Create Rectangular Foot");
-
+                            if (!item.IsActive)
+                            {
+                                item.Activate();
+                                doc.Regenerate();
+                            }
                             // 在原点创建承台实例
                             XYZ origin = new XYZ(0, 0, 0);
                             FamilyInstance rectFoot = doc.Create.NewFamilyInstance(origin, item, StructuralType.NonStructural);
 
                             // 设置承台实例的参数
-                            rectFoot.LookupParameter("长度").Set(length);
-                            rectFoot.LookupParameter("宽度").Set(width);
-                            rectFoot.LookupParameter("基础厚度").Set(height);
+                            rectFoot.LookupParameter("长度1").Set(length);
+                            rectFoot.LookupParameter("宽度1").Set(width);
+                            rectFoot.LookupParameter("承台高度").Set(height);
 
                             trans.Commit();
                         }

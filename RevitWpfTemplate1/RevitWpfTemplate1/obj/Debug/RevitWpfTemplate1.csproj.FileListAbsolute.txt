@@ -10,4 +10,3 @@ F:\Rum\CushionCap202302\RevitWpfTemplate1\RevitWpfTemplate1\RevitWpfTemplate1\ob
 F:\Rum\CushionCap202302\RevitWpfTemplate1\RevitWpfTemplate1\RevitWpfTemplate1\obj\Debug\RevitWpfTemplate1.csproj.CoreCompileInputs.cache
 F:\Rum\CushionCap202302\RevitWpfTemplate1\RevitWpfTemplate1\RevitWpfTemplate1\obj\Debug\RevitWpfTemplate1.dll
 F:\Rum\CushionCap202302\RevitWpfTemplate1\RevitWpfTemplate1\RevitWpfTemplate1\obj\Debug\RevitWpfTemplate1.pdb
-F:\Rum\CushionCap202302\RevitWpfTemplate1\RevitWpfTemplate1\RevitWpfTemplate1\obj\Debug\RevitWpfTemplate1.csproj.AssemblyReference.cache
